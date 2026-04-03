@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research | Trey Livian</title>
+  <title>Trey Livian</title>
   <style>
     body {
       margin: 0;
@@ -38,6 +38,72 @@
       text-decoration: underline;
     }
 
+    .hero {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      align-items: start;
+      margin-bottom: 56px;
+    }
+
+    .profile-photo {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 10px;
+      display: block;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+      object-fit: cover;
+      aspect-ratio: 4 / 5;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 3rem;
+      font-weight: 600;
+      color: #132238;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #4c5d70;
+      margin-bottom: 24px;
+    }
+
+    .affiliation {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .crest {
+      height: 28px;
+      width: auto;
+    }
+    
+    .intro {
+      font-size: 1.08rem;
+      margin-bottom: 28px;
+      max-width: 650px;
+    }
+
+    .contact {
+      margin-top: 18px;
+      font-size: 1rem;
+    }
+
+    .contact a,
+    .cv-link {
+      color: #2c4a73;
+      text-decoration: none;
+    }
+
+    .contact a:hover,
+    .cv-link:hover {
+      text-decoration: underline;
+    }
+
     .section {
       background: white;
       padding: 28px 32px;
@@ -46,14 +112,8 @@
       box-shadow: 0 4px 18px rgba(0,0,0,0.05);
     }
 
-    h1 {
-      margin-top: 0;
-      font-size: 2.5rem;
-      color: #132238;
-      margin-bottom: 24px;
-    }
-
     h2 {
+      margin-top: 0;
       font-size: 1.5rem;
       color: #132238;
       border-bottom: 1px solid #e5e5e5;
@@ -61,16 +121,39 @@
       margin-bottom: 18px;
     }
 
-    h3 {
-      margin-top: 18px;
-      margin-bottom: 8px;
-      font-size: 1.2rem;
-      color: #2c4a73;
-    }
-
     ul {
       padding-left: 20px;
       margin: 0;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 0.95rem;
+      color: #666;
+      text-align: center;
+    }
+
+    @media (max-width: 780px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .profile-photo {
+        max-width: 220px;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 2.3rem;
+      }
     }
   </style>
 </head>
@@ -79,23 +162,40 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
-      <a href="cv.pdf" target="_blank">CV</a>
+      <a href="cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
     </nav>
 
-    <h1>Research</h1>
+    <div class="hero">
+      <div>
+        <img src="profile.jpg" alt="Photo of Trey Livian" class="profile-photo" />
+      </div>
 
-    <div class="section">
-      <h2>Working Papers</h2>
-      <ul>
-        <!-- Nothing yet -->
-      </ul>
+      <div>
+        <h1>Trey Livian</h1>
+        <div class="affiliation">
+        <div class="subtitle">Economics PhD Student at University</div>
+        <img src="crest.png" alt="crest" class="crest" />
+        </div>
 
-      <h2>Published Papers</h2>
-      <ul>
-        <!-- Nothing yet -->
-      </ul>
+        <p class="contact">
+          Email:
+          <a href="mailto:your-email@example.com">treylivian@someuniversity.edu</a>
+          <br />
+          GitHub:
+          <a href="https://github.com/treylivian" target="_blank" rel="noopener noreferrer">github.com/treylivian</a>
+        </p>
+      </div>
     </div>
 
+    <div class="section">
+      <h2>Research Interests</h2>
+      <p>
+        Econometric theory, applied econometrics, instrumental variable estimation,
+        and machine learning.
+      </p>
+    </div>
+
+    </div>
   </div>
 </body>
 </html>
