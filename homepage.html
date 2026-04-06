@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #f7f7f5;
+  color: #1a1a1a;
+  line-height: 1.7;
+}
+
+/* Penn-inspired color variables */
+:root {
+  --penn-blue: #011F5B;
+  --penn-red: #990000;
+  --soft-blue: #f2f4f8;
+  --muted-text: #4a5568;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--penn-blue);
+  font-weight: 500;
+  position: relative;
+}
+
+/* subtle red underline on hover */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--penn-red);
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 56px;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 10px 30px rgba(1,31,91,0.15);
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--penn-blue);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--muted-text);
+  margin-bottom: 24px;
+  white-space: nowrap;
+}
+
+.affiliation {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: nowrap;
+}
+
+.intro {
+  font-size: 1.08rem;
+  margin-bottom: 28px;
+  max-width: 650px;
+}
+
+.contact {
+  margin-top: 18px;
+  font-size: 1rem;
+}
+
+.contact a,
+.cv-link {
+  color: var(--penn-blue);
+  text-decoration: none;
+}
+
+.contact a:hover,
+.cv-link:hover {
+  color: var(--penn-red);
+  text-decoration: underline;
+}
+
+.section {
+  background: var(--soft-blue);
+  padding: 28px 32px;
+  border-radius: 12px;
+  margin-bottom: 28px;
+  box-shadow: 0 6px 20px rgba(1,31,91,0.08);
+  border-left: 4px solid var(--penn-red);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--penn-blue);
+  border-bottom: 1px solid #d6dbe3;
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+}
+
+ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+.footer {
+  margin-top: 40px;
+  font-size: 0.95rem;
+  color: #666;
+  text-align: center;
+}
+
+@media (max-width: 780px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .profile-photo {
+    max-width: 220px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+}
